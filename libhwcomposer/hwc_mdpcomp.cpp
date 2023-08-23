@@ -979,7 +979,7 @@ int MDPComp::prepare(hwc_context_t *ctx, hwc_display_contents_1_t* list) {
         ALOGD("GEOMETRY change: %d", (list->flags & HWC_GEOMETRY_CHANGED));
         android::String8 sDump("");
         dump(sDump);
-        ALOGE("%s",sDump.string());
+        ALOGE("%s",sDump.c_str());
     }
 
     return ret;

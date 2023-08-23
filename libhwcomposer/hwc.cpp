@@ -850,7 +850,7 @@ void hwc_dump(struct hwc_composer_device_1* dev, char *buff, int buff_len)
     ovDump[0] = '\0';
     ctx->mRotMgr->getDump(ovDump, 2048);
     dumpsys_log(aBuf, ovDump);
-    strlcpy(buff, aBuf.string(), buff_len);
+    strlcpy(buff, aBuf.c_str(), buff_len);
 }
 
 int hwc_getActiveConfig(struct hwc_composer_device_1* dev, int disp) {
