@@ -30,6 +30,7 @@
 #include <hwc_qclient.h>
 #include <IQService.h>
 #include <hwc_utils.h>
+#include <binder/Parcel.h>
 
 #define QCLIENT_DEBUG 0
 

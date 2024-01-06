@@ -3,6 +3,7 @@ include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
 LOCAL_MODULE                  := libqdutils
+LOCAL_VENDOR_MODULE           := true
 LOCAL_MODULE_TAGS             := optional
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libbinder libqservice libui
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdutils\"
@@ -16,7 +17,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_VENDOR_MODULE             := true
-LOCAL_SHARED_LIBRARIES          := liblog libcutils
+LOCAL_SHARED_LIBRARIES          := liblog libcutils libhardware
 LOCAL_HEADER_LIBRARIES          := generated_kernel_headers display_headers
 LOCAL_SRC_FILES                 := qdMetaData.cpp
 LOCAL_CFLAGS                    := $(common_flags)
